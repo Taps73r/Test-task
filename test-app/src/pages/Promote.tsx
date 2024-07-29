@@ -1,0 +1,1 @@
+export const Promote: React.FC = () => <div>Promote Page</div>;

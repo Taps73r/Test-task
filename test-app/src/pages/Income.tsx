@@ -1,0 +1,1 @@
+export const Income: React.FC = () => <div>Income Page</div>;

@@ -1,0 +1,1 @@
+export const Help: React.FC = () => <div>Help Page</div>;
