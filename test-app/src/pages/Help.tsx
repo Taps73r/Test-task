@@ -1,1 +1,1 @@
-export const Help: React.FC = () => <div>Help Page</div>;
+export const Help: React.FC = () => <h1>Help Page</h1>;

@@ -1,1 +1,1 @@
-export const Promote: React.FC = () => <div>Promote Page</div>;
+export const Promote: React.FC = () => <h1>Promote Page</h1>;

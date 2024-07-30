@@ -7,11 +7,11 @@ import { Promote } from "./pages/Promote";
 import { Income } from "./pages/Income";
 import { DashBoard } from "./pages/DashBoard";
 import { Customers } from "./pages/Customers";
-import { SideBar } from "./components/SideBar";
+import { SideBar } from "./components/SideBar/SideBar";
 
 export const App: React.FC = () => {
   return (
-    <div className="app">
+    <div className="main">
       <SideBar />
       <Routes>
         <Route path="/customers" element={<Customers />} />

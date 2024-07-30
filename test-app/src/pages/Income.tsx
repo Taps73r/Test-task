@@ -1,1 +1,1 @@
-export const Income: React.FC = () => <div>Income Page</div>;
+export const Income: React.FC = () => <h1>Income Page</h1>;

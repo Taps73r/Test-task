@@ -1,1 +1,1 @@
-export const DashBoard: React.FC = () => <div>Dashboard Page</div>
+export const DashBoard: React.FC = () => <h1>Dashboard Page</h1>

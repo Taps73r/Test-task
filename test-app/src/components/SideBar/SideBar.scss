@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.sidebar__nav__item,
+.sidebar__nav__item--active {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
+.sidebar__nav__item:focus,
+.sidebar__nav__item--active:focus {
+  outline: none;
+  color: inherit;
+}
+
+.sidebar__nav__item:active,
+.sidebar__nav__item--active:active {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar {
+  width: 306px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+
+  &__header {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 36px 0 64px 26px;
+
+    &__title {
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: 1;
+      margin-left: 8px;
+    }
+
+    &__version {
+      font-size: 12px;
+      color: #aaa;
+      margin: 9px 0 0 4px;
+    }
+
+    &__logo {
+      width: 50px;
+      height: auto;
+    }
+  }
+
+  &__nav {
+    margin-left: 26px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__arrow {
+      margin-left: auto;
+    }
+
+    &__item {
+      font-size: 14px;
+      font-weight: 400;
+      width: 250px;
+      padding: 11px 8px 11px 11px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+
+      &:hover:not(.sidebar__nav__item--active) {
+        background-color: #f0f0f0;
+      }
+
+      &--active {
+        background-color: #5932ea;
+        color: #fff;
+
+        .sidebar__nav__icon,
+        .sidebar__nav__arrow,
+        .sidebar__nav__text {
+          color: #fff;
+        }
+      }
+
+      &__text {
+        flex-grow: 1;
+      }
+    }
+    .sidebar__nav__icon {
+      width: 24px;
+      height: auto;
+      margin-right: 14px;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1440px) {
+}
