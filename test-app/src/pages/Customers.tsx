@@ -1,3 +1,9 @@
+import CustomersList from '../components/CustomersList/CustomersList';
+
 export const Customers: React.FC = () => {
-    return <div className="customers"></div>
-}
+  return (
+    <main className="customers">
+      <CustomersList />
+    </main>
+  );
+};
