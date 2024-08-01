@@ -141,12 +141,16 @@ const CustomersList: React.FC = () => {
           </button>
         </div>
         <div className="customers-list__controls">
-          <input
-            type="text"
-            placeholder="Search"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+          <div className="input-wrapper">
+            <img src="./search.svg" alt="Search" className="search-icon" />
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="search-input"
+            />
+          </div>
         </div>
       </header>
       <table className="customers-list__table">

@@ -1,4 +1,38 @@
+.customers-list__controls {
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 216px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #f9fbff;
+  color: #292d32;
+}
+
+.search-input::placeholder {
+  color: #b5b7c0;
+}
+
 .customers-list {
+  letter-spacing: -1;
   width: 968px;
   margin: 124px 0 262px 75px;
   padding: 34px 46px 36px 36px;
@@ -46,7 +80,6 @@
 
     h1 {
       font-size: 22px;
-      letter-spacing: -1;
       font-weight: 600;
     }
 
@@ -55,9 +88,18 @@
       align-items: center;
 
       input {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+        width: 216px;
+        padding: 9px 9px 9px 42px;
+        margin-right: 9px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        background-color: #f9fbff;
+        color: #292d32;
+
+        &::placeholder {
+          color: #b5b7c0;
+        }
       }
     }
   }
@@ -80,9 +122,8 @@
 
     th,
     td {
-      margin: 20px 0 20px 0;
+      margin: 20px 0;
       text-align: left;
-      letter-spacing: -1;
       font-size: 14px;
       font-weight: 500;
     }
@@ -94,7 +135,7 @@
 
       &:last-child {
         text-align: end;
-        padding-right: 20px;
+        padding-right: 24px;
       }
     }
 
@@ -109,7 +150,6 @@
       place-items: center;
       border-radius: 4px;
       font-size: 14px;
-      letter-spacing: -1;
       font-weight: 500;
 
       &.active {
@@ -136,7 +176,6 @@
       color: #b5b7c0;
       font-size: 14px;
       font-weight: 500;
-      letter-spacing: -1;
     }
 
     .pagination {
@@ -155,9 +194,8 @@
         background-color: #f5f5f5;
         width: 26px;
         height: 24px;
-        font-size: 12;
+        font-size: 12px;
         font-weight: 500;
-        letter-spacing: -1;
         border: 1px solid #eeeeee;
         border-radius: 4px;
         cursor: pointer;
