@@ -6,6 +6,7 @@ interface INavigationButtonProps {
   iconPath: string;
   whiteIconPath: string;
   altName: string;
+  firstItem: boolean;
 }
 
 export const NavigationButton: React.FC<INavigationButtonProps> = ({
@@ -13,6 +14,7 @@ export const NavigationButton: React.FC<INavigationButtonProps> = ({
   iconPath,
   whiteIconPath,
   altName,
+  firstItem,
 }) => {
   return (
     <li>
@@ -32,11 +34,15 @@ export const NavigationButton: React.FC<INavigationButtonProps> = ({
               className="sidebar__nav__icon"
             />
             <span className="sidebar__nav__text">{altName}</span>
-            <img
-              src={isActive ? '/arrow.svg' : '/arrow_grey.svg'}
-              alt="Arrow"
-              className="sidebar__nav__arrow"
-            />
+            {firstItem ? (
+              <></>
+            ) : (
+              <img
+                src={isActive ? '/arrow.svg' : '/arrow_grey.svg'}
+                alt="Arrow"
+                className="sidebar__nav__arrow"
+              />
+            )}
           </>
         )}
       </NavLink>

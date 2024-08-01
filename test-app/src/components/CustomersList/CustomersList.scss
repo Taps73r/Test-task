@@ -1,10 +1,10 @@
 .customers-list {
   width: 968px;
-  margin: 0 auto;
-  padding: 30px 38px;
+  margin: 124px 0 262px 75px;
+  padding: 34px 46px 36px 36px;
   background: #fff;
   border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
 
   &__header {
     display: flex;
@@ -67,29 +67,61 @@
     border-collapse: collapse;
     margin-bottom: 20px;
 
+    tr {
+      border-bottom: 1px solid #eeeeee;
+
+      td {
+        &:last-child {
+          display: grid;
+          place-items: end;
+        }
+      }
+    }
+
     th,
     td {
-      padding: 12px;
+      margin: 20px 0 20px 0;
       text-align: left;
-      border-bottom: 1px solid #ddd;
+      letter-spacing: -1;
+      font-size: 14px;
+      font-weight: 500;
     }
 
     th {
-      background-color: #f1f1f1;
+      color: #b5b7c0;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #eeeeee;
+
+      &:last-child {
+        text-align: end;
+        padding-right: 20px;
+      }
+    }
+
+    td {
+      color: #292d32;
     }
 
     .status {
-      padding: 4px 8px;
-      border-radius: 12px;
+      width: 80px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 4px;
+      font-size: 14px;
+      letter-spacing: -1;
+      font-weight: 500;
 
       &.active {
-        background-color: #4caf50;
-        color: #fff;
+        background-color: #16c09859;
+        color: #008767;
+        border: 1px solid #00b087;
       }
 
       &.inactive {
-        background-color: #f44336;
-        color: #fff;
+        border: 1px solid #df0404;
+        background-color: #ffc5c5;
+        color: #df0404;
       }
     }
   }
@@ -98,20 +130,47 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 30px;
+
+    span {
+      color: #b5b7c0;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -1;
+    }
 
     .pagination {
       display: flex;
+      gap: 12px;
+
+      .ellipsis {
+        color: #000000;
+        cursor: default;
+      }
 
       button {
-        margin: 0 2px;
-        padding: 8px 12px;
-        border: none;
+        display: grid;
+        place-items: center;
+        color: #404b52;
+        background-color: #f5f5f5;
+        width: 26px;
+        height: 24px;
+        font-size: 12;
+        font-weight: 500;
+        letter-spacing: -1;
+        border: 1px solid #eeeeee;
         border-radius: 4px;
         cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: #d8d8d8;
+        }
 
         &.active {
           background-color: #5932ea;
           color: #fff;
+          border: none;
         }
       }
     }

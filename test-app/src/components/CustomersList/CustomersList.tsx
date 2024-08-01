@@ -127,7 +127,7 @@ const CustomersList: React.FC = () => {
   return (
     <div className="customers-list">
       <header className="customers-list__header">
-        <div className='customers-list__header__flex'>
+        <div className="customers-list__header__flex">
           <h1>All Customers</h1>
           <button
             className={`filter-button ${
@@ -169,9 +169,9 @@ const CustomersList: React.FC = () => {
               <td>{customer.email}</td>
               <td>{customer.country}</td>
               <td>
-                <span className={`status ${customer.status.toLowerCase()}`}>
+                <p className={`status ${customer.status.toLowerCase()}`}>
                   {customer.status}
-                </span>
+                </p>
               </td>
             </tr>
           ))}

@@ -64,14 +64,6 @@ export const customers = [
     status: 'Inactive',
   },
   {
-    name: 'Jane Cooper',
-    company: 'Microsoft',
-    phone: '(225) 555-0118',
-    email: 'jane@microsoft.com',
-    country: 'United States',
-    status: 'Active',
-  },
-  {
     name: 'Floyd Miles',
     company: 'Yahoo',
     phone: '(205) 555-0100',
