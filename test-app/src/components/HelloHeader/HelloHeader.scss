@@ -1,0 +1,25 @@
+.hello-header {
+  font-weight: 500;
+  font-size: 24px;
+  margin-left: 69px;
+  margin-top: 41px;
+  color: #000;
+}
+
+@media (min-width: 1025px) {
+  .hello-header {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 1130px) {
+  .hello-header {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hello-header {
+    margin-left: 75px;
+  }
+}

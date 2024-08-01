@@ -7,11 +7,23 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  background-color: #FAFBFF;
+body,
+html {
+  height: 100%;
 }
 
-.main {
+body {
+  background-color: #fafbff;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  height: 100%;
+}
+
+.main-content {
+  flex-grow: 1;
 }
