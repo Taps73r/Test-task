@@ -142,4 +142,25 @@
   }
 }
 @media (min-width: 1400px) {
+  .sidebar {
+    width: 306px;
+
+    &__header {
+      margin: 36px 0 64px 26px;
+    }
+
+    &__nav {
+      margin-left: 26px;
+
+      ul {
+        gap: 18px;
+      }
+
+      &__item {
+        width: 250px;
+
+        height: 46px;
+      }
+    }
+  }
 }
