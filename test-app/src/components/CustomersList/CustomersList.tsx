@@ -142,7 +142,11 @@ const CustomersList: React.FC = () => {
         </div>
         <div className="customers-list__controls">
           <div className="input-wrapper">
-            <img src="./search.svg" alt="Search" className="search-icon" />
+            <img
+              src={`${import.meta.env.BASE_URL}search.svg`}
+              alt="Search"
+              className="search-icon"
+            />
             <input
               type="text"
               placeholder="Search"

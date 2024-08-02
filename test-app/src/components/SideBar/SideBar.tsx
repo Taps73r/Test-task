@@ -7,7 +7,11 @@ export const SideBar: React.FC = () => {
   return (
     <div className="sidebar">
       <header className="sidebar__header">
-        <img src="/dashboard.svg" alt="Logo" className="sidebar__logo" />
+        <img
+          src={`${import.meta.env.BASE_URL}dashboard.svg`}
+          alt="Logo"
+          className="sidebar__logo"
+        />
         <p className="sidebar__header__title">Dashboard</p>
         <p className="sidebar__header__version">v.01</p>
       </header>
