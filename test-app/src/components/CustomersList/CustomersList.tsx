@@ -142,11 +142,7 @@ const CustomersList: React.FC = () => {
         </div>
         <div className="customers-list__controls">
           <div className="input-wrapper">
-            <img
-              src={`${import.meta.env.BASE_URL}search.svg`}
-              alt="Search"
-              className="search-icon"
-            />
+            <img src="./search.svg" alt="Search" className="search-icon" />
             <input
               type="text"
               placeholder="Search"
@@ -171,12 +167,28 @@ const CustomersList: React.FC = () => {
         <tbody>
           {paginatedCustomers.map((customer, index) => (
             <tr key={index}>
-              <td>{customer.name}</td>
-              <td>{customer.company}</td>
-              <td>{customer.phone}</td>
-              <td>{customer.email}</td>
-              <td>{customer.country}</td>
               <td>
+                <p>Customer name</p>
+                <p>{customer.name}</p>
+              </td>
+              <td>
+                <p>Company</p>
+                <p>{customer.company}</p>
+              </td>
+              <td>
+                <p>Phone Number</p>
+                <p>{customer.phone}</p>
+              </td>
+              <td>
+                <p>Email</p>
+                <p>{customer.email}</p>
+              </td>
+              <td>
+                <p>Country</p>
+                <p>{customer.country}</p>
+              </td>
+              <td>
+                <p>Status</p>
                 <p className={`status ${customer.status.toLowerCase()}`}>
                   {customer.status}
                 </p>

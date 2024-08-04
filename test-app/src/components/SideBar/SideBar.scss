@@ -115,9 +115,38 @@
   }
 }
 
-@media (max-width: 599px) {
-}
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 300px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: -300px;
+    height: 100%;
+    background: #fff;
+    transition: left 0.5s ease;
+
+    &.visible {
+      left: 0;
+    }
+
+    &__header {
+      margin: 36px 0 64px 26px;
+    }
+
+    &__nav {
+      margin-left: 26px;
+
+      ul {
+        gap: 18px;
+      }
+
+      &__item {
+        width: 250px;
+        height: 46px;
+      }
+    }
+  }
 }
 @media (min-width: 1024px) {
   .sidebar {

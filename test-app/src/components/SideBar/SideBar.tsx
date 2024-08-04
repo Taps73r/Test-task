@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import './SideBar.scss';
 import { NavigationMenu } from './NavigationMenu';
 import { navItems } from '../../constants/navItems';
 
-export const SideBar: React.FC = () => {
+interface ISideBarProps {
+  isVisible: boolean;
+  setIsSidebarVisible: Dispatch<SetStateAction<boolean>>;
+}
+
+export const SideBar: React.FC<ISideBarProps> = ({
+  isVisible,
+  setIsSidebarVisible,
+}) => {
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isVisible ? 'visible' : ''}`}>
       <header className="sidebar__header">
         <img
           src={`${import.meta.env.BASE_URL}dashboard.svg`}
@@ -15,7 +23,10 @@ export const SideBar: React.FC = () => {
         <p className="sidebar__header__title">Dashboard</p>
         <p className="sidebar__header__version">v.01</p>
       </header>
-      <NavigationMenu items={navItems} />
+      <NavigationMenu
+        setIsSidebarVisible={setIsSidebarVisible}
+        items={navItems}
+      />
     </div>
   );
 };

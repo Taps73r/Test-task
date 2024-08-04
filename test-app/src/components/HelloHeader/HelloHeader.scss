@@ -6,6 +6,41 @@
   color: #000;
 }
 
+.sidebar-toggle-button {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .sidebar-toggle-button {
+    font-weight: 900;
+    font-size: 26px;
+    display: block;
+    background-color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #d4d4d4;
+    }
+  }
+  .hello-header {
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+  .hello-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 30px;
+  }
+}
+
 @media (min-width: 1025px) {
   .hello-header {
     margin-left: 15px;

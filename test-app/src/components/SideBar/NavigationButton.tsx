@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 
 interface INavigationButtonProps {
   buttonLink: string;
@@ -7,6 +7,7 @@ interface INavigationButtonProps {
   whiteIconPath: string;
   altName: string;
   firstItem: boolean;
+  setIsSidebarVisible: Dispatch<SetStateAction<boolean>>;
 }
 
 export const NavigationButton: React.FC<INavigationButtonProps> = ({
@@ -15,10 +16,12 @@ export const NavigationButton: React.FC<INavigationButtonProps> = ({
   whiteIconPath,
   altName,
   firstItem,
+  setIsSidebarVisible,
 }) => {
   return (
     <li>
       <NavLink
+        onClick={() => setIsSidebarVisible(false)}
         to={buttonLink}
         className={({ isActive }) =>
           isActive

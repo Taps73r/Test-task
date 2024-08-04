@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import { NavigationButton } from './NavigationButton';
 
 interface INavigationMenuProps {
@@ -8,9 +8,13 @@ interface INavigationMenuProps {
     whiteIconPath: string;
     altName: string;
   }[];
+  setIsSidebarVisible: Dispatch<SetStateAction<boolean>>;
 }
 
-export const NavigationMenu: React.FC<INavigationMenuProps> = ({ items }) => {
+export const NavigationMenu: React.FC<INavigationMenuProps> = ({
+  items,
+  setIsSidebarVisible,
+}) => {
   return (
     <nav className="sidebar__nav">
       <ul className="sidebar__nav__list">
@@ -18,6 +22,7 @@ export const NavigationMenu: React.FC<INavigationMenuProps> = ({ items }) => {
           if (index === 0)
             return (
               <NavigationButton
+                setIsSidebarVisible={setIsSidebarVisible}
                 firstItem={true}
                 key={item.buttonLink}
                 buttonLink={item.buttonLink}
@@ -29,6 +34,7 @@ export const NavigationMenu: React.FC<INavigationMenuProps> = ({ items }) => {
           else {
             return (
               <NavigationButton
+                setIsSidebarVisible={setIsSidebarVisible}
                 firstItem={false}
                 key={item.buttonLink}
                 buttonLink={item.buttonLink}
