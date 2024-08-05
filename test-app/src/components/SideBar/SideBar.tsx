@@ -14,19 +14,28 @@ export const SideBar: React.FC<ISideBarProps> = ({
 }) => {
   return (
     <div className={`sidebar ${isVisible ? 'visible' : ''}`}>
-      <header className="sidebar__header">
-        <img
-          src={`${import.meta.env.BASE_URL}dashboard.svg`}
-          alt="Logo"
-          className="sidebar__logo"
+      <div>
+        <header className="sidebar__header">
+          <img
+            src={`${import.meta.env.BASE_URL}dashboard.svg`}
+            alt="Logo"
+            className="sidebar__logo"
+          />
+          <p className="sidebar__header__title">Dashboard</p>
+          <p className="sidebar__header__version">v.01</p>
+        </header>
+        <NavigationMenu
+          setIsSidebarVisible={setIsSidebarVisible}
+          items={navItems}
         />
-        <p className="sidebar__header__title">Dashboard</p>
-        <p className="sidebar__header__version">v.01</p>
-      </header>
-      <NavigationMenu
-        setIsSidebarVisible={setIsSidebarVisible}
-        items={navItems}
-      />
+      </div>
+      <div className="bottom-block">
+        <img src={`${import.meta.env.BASE_URL}user_icon.svg`} alt="User Icon" />
+        <div className="bottom-block__text">
+          <p>Evano</p>
+          <p>Project Manager</p>
+        </div>
+      </div>
     </div>
   );
 };
