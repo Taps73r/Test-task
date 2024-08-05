@@ -223,6 +223,39 @@
   }
 }
 
+@media (max-width: 340px) {
+  .customers-list {
+    &__table {
+      tr {
+        th,
+        td {
+          font-size: 12px;
+        }
+      }
+    }
+    &__controls {
+      input {
+        width: 170px;
+      }
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .customers-list {
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    &__footer {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}
+
 @media (max-width: 780px) {
   .customers-list {
     margin: 20px auto;
